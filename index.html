@@ -109,7 +109,8 @@ function createPC(socketId, isOffer) {
     var element = document.createElement('video');
     element.id = "remoteView" + socketId;
     element.autoplay = 'autoplay';
-    element.src = URL.createObjectURL(event.stream);
+    //element.src = URL.createObjectURL(event.stream);
+    element.src = event.stream;
     remoteViewContainer.appendChild(element);
   };
   pc.addStream(localStream);
